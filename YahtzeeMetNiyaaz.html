@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yahtzee alleen w3schools</title>
+  <link rel="stylesheet" href="StyleYahtzee.css">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>
+        <button id="rolDobbelSteenKnop" type="button" onclick="rolDobbelSteen()">Druk hier om te gooien!</button>
+        <button id="selecteerScoreKnop" type="button" onclick="selecteerScore()">Druk hier om je score te selecteren, als er geen opties zijn kan je hier ook op drukken.</button>
+      </th>
+    </tr>
+
+    <tr>
+      <td>
+        <div id="weergeefWorp">
+          '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th>Selecteer deze Score:</th>
+      <th>Jouw score zou zijn:</th>
+      <th>Geselecteerde Score:</th>
+      <th>Eerste Sectie</th>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteer1" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScore1"></div>
+      </td>
+      <td>
+        <div id="definitief1"></div>
+      </td>
+      <td>Één</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteer2" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScore2"></div>
+      </td>
+      <td>
+        <div id="definitief2"></div>
+      </td>
+      <td>Twee</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteer3" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScore3"></div>
+      </td>
+      <td>
+        <div id="definitief3"></div>
+      </td>
+      <td>Drie</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteer4" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScore4"></div>
+      </td>
+      <td>
+        <div id="definitief4"></div>
+      </td>
+      <td>Vier</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteer5" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScore5"></div>
+      </td>
+      <td>
+        <div id="definitief5"></div>
+      </td>
+      <td>Vijf</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteer6" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScore6"></div>
+      </td>
+      <td>
+        <div id="definitief6"></div>
+      </td>
+      <td>Zes</td>
+    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Tweede Sectie  -->
+
+    
+
+    <tr>
+      <th>
+        <div id="weerGeefTotaleScore">Je totale Score = 0</div>
+        <br>
+        <div id="weerGeefTotaleScoreB">Je totale Score B = 0</div>
+      </th>
+      <th><div id="weergeefRondes">Overige rondes 6</div></th>
+      <th><div id="weergeefWorpen">Overige worpen 3</div></th>
+      <th>Tweede Sectie:</th>
+    </tr>
+
+
+
+    <tr>
+      <td><input type="radio" id="selecteerDrieDezelfde" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScoreDrieDezelfde"></div>
+      </td>
+      <td>
+        <div id="definitiefDrieDezelfde"></div>
+      </td>
+      <td>Drie Dezelfde</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteerVierDezelfde" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScoreVierDezelfde"></div>
+      </td>
+      <td>
+        <div id="definitiefVierDezelfde"></div>
+      </td>
+      <td>Vier Dezelfde</td>
+    </tr>
+
+    <!-- <tr>
+      <td><input type="radio" id="selecteerVolHuis" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScoreVolHuis"></div>
+      </td>
+      <td>
+        <div id="definitiefVolHuis"></div>
+      </td>
+      <td>Full House</td>
+       <td>Volhuis</td> 
+    </tr>  -->
+
+    <tr>
+      <td><input type="radio" id="selecteerKleineStraat" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScoreKleineStraat"></div>
+      </td>
+      <td>
+        <div id="definitiefKleineStraat"></div>
+      </td>
+      <td>Kleine Straat</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteerGroteStraat" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScoreGroteStraat"></div>
+      </td>
+      <td>
+        <div id="definitiefGroteStraat"></div>
+      </td>
+      <td>Grote Straat</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteerYahtzee" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScoreYahtzee"></div>
+      </td>
+      <td>
+        <div id="definitiefYahtzee"></div>
+      </td>
+      <td>Yahtzee</td>
+    </tr>
+
+    <tr>
+      <td><input type="radio" id="selecteerKans" name="basis" disabled></td>
+      <td>
+        <div id="weergeefScoreKans"></div>
+      </td>
+      <td>
+        <div id="definitiefKans"></div>
+      </td>
+      <td>Kans</td>
+    </tr>
+  </table>
+
+
+
+
+  <script src="yahtzeeMetNiyaazScript.js"></script>
+</body>
+</html>
